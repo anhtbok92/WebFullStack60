@@ -1,0 +1,15 @@
+{
+  "name": "learning-npm",
+  "version": "1.0.0",
+  "description": "this is project about learning npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nguyen Tuan Anh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "jsonexport": "^3.2.0"
+  }
+}
