@@ -3,7 +3,10 @@ const app = express();
 
 //B1. Tao 1 middleware có nhiệm vụ chặn người dùng không được truy cập vào trang admin
 const checkRequestMiddleware = (req, res, next) => {
-    // check data, check IP cua user co dc phep truy cap khong
+    // check data, validate, check IP cua user co dc phep truy cap khong
+        // check if (error) {
+        // res.render('index', {errors: 'ten chua duoc nhap'});
+    // }
     if (req.url === '/admin') {
         res.send('Ban khong co quyen truy cap vao trang nay');
     } else {

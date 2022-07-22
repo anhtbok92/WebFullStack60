@@ -11,13 +11,13 @@ body
                 form(action="/user-info", method="post", enctype="application/x-www-form-urlencoded")
                     .form-group
                         label(for="name") Họ và tên
-                        input.form-control(type="text", name="name", placeholder="Nguyễn Văn A", required)
+                        input.form-control(type="text", name="name", placeholder="Nguyễn Văn A")
                     .form-group
                         label(for="age") Tuổi
-                        input.form-control(type="number", name="age", placeholder="19", required)
+                        input.form-control(type="number", name="age", placeholder="19")
                     .form-group
                         label(for="gender") Giới tính
-                        select.form-control(name="gender", required)
+                        select.form-control(name="gender")
                             option(value="Nam") Nam
                             option(value="Nữ") Nữ
                     button.btn.btn-block.btn-success(type="submit") Gửi
