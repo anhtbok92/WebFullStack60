@@ -66,6 +66,8 @@
 
 ### 5. Thiết kế API
 
+#### 5.1 API user
+
 1. Register a new user
 
 ```
@@ -96,5 +98,74 @@
 ```
 // @desc: update user profile
 // @route: PUT /api/users/profile
-// @access: Private - Su dung token
+// @access: Private
+```
+
+5. Get all users
+
+```
+// @desc: Get all users
+// @route: GET /api/users
+// @access: Private/admin
+```
+
+6. Delete user
+
+```
+// @desc: Delete user
+// @route: DELETE /api/users/:id
+// @access: Private/admin
+```
+
+7. Get user by ID
+
+```
+// @desc: Get user by ID
+// @route: GET /api/users/:id
+// @access: Private/admin
+```
+
+8. Update user by ID
+
+```
+// @desc: Update user by ID
+// @route: PUT /api/users/:id
+// @access: Private/admin
+```
+
+#### 5.2 API Product
+
+1. Get all products
+```
+// @desc: Get all products
+// @route: GET /api/products
+// @access: Public
+```
+
+2. Get product by ID
+```
+// @desc: Get product by ID
+// @route: GET /api/products/:id
+// @access: Public
+```
+
+3. Delete product by ID
+```
+// @desc: Delete product by ID
+// @route: DELETE /api/products/:id
+// @access: Private/admin
+```
+
+4. Create product
+```
+// @desc: Create product
+// @route: POST /api/products
+// @access: Private/admin
+```
+
+5. Update a product
+```
+// @desc: Update a product
+// @route: PUT /api/products/:id
+// @access: Private/admin
 ```
