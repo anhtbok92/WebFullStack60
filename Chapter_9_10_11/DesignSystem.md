@@ -39,7 +39,7 @@
   + countInStock: number, required (số lượng hàng trong kho)
 - Bảng Order (order table) - Quản lý các đơn hàng
   + user: Ref: User (sản phẩm này được mua bởi ai)
-  + orderItems: Object (Thông tin đơn hàng)
+  + orderItems: Array[Object] (Thông tin đơn hàng)
     + name: string, required (tên sản phẩm)
     + qty: number, required (số lượng sản phẩm)
     + image: string, required (ảnh sản phẩm)
@@ -168,4 +168,68 @@
 // @desc: Update a product
 // @route: PUT /api/products/:id
 // @access: Private/admin
+```
+
+6. Create new review for product
+```
+// @desc: Create new review for product
+// @route: POST /api/products/:id/reviews
+// @access: Private
+```
+- Lưu thông tin người review vào cột review
+- Đếm số lượng người review và lưu vào cột numReviews
+- Tính tổng review trung bình (Lưu vào cột rating)
+- Gợi ý: 
+  + Đếm số lượng: MaxLength của cột Review
+  + Tính tổng review trung bình: dùng hàm reduce trong javascript
+
+
+7. Get top 5 products (top 5 sản phẩm được rating trung bình cao nhất)
+```
+// @desc: Get top 5 products
+// @route: GET /api/products/top
+// @access: Public
+```
+
+
+#### 5.3 API Order
+
+1. Get all orders
+
+```
+// @desc: Get all orders
+// @route: GET /api/orders
+// @access: Private/admin
+```
+
+2. Get my orders
+
+```
+// @desc: Get my orders
+// @route: GET /api/orders/myorders
+// @access: Private
+```
+
+3. Get order by id
+
+```
+// @desc: Get order by id
+// @route: GET /api/orders/:id
+// @access: Private
+```
+
+4. Create new order
+
+```
+// @desc: Create new order
+// @route: POST /api/orders
+// @access: Private
+```
+
+5. Update Order To Paid (cập nhật order từ chưa thanh toán -> đã thanh toán)
+
+```
+// @desc: Update Order To Paid 
+// @route: PUT /api/orders/:id/pay
+// @access: Private/admin (cân nhắc chỉ Private đối với tích hợp thanh toán online)
 ```
